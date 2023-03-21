@@ -1,5 +1,4 @@
-import React, { memo, useState } from "react";
-import DOMPurify from 'dompurify';
+import React from "react";
 import Editor from 'react-simple-code-editor';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
@@ -10,15 +9,9 @@ import 'prismjs/themes/prism.css'
 
 const BlogEditor = ({ postId, article, handleBody }) => {
 
-    // const [content, setContent] = useState('<p>This is some editable content.</p>');
-    const [code, setCode] = React.useState("");
-
+    const [content, setContent] = React.useState("");
     const handleContentChange = (value) => {
-        console.log("🚀 ~ file: BlogEditor.jsx:17 ~ handleContentChange ~ value:", value)
-        // const sanitizedContent = DOMPurify.sanitize(event.target.innerHTML);
-        // console.log("🚀 ~ file: BlogEditor.jsx:11 ~ handleContentChange ~ sanitizedContent:", sanitizedContent)
-        // setContent(sanitizedContent);
-        setCode(value)
+        setContent(value)
     };
 
 
@@ -26,11 +19,11 @@ const BlogEditor = ({ postId, article, handleBody }) => {
         <div>
             <div className="flex py-6">
                 <h2 className="text-3xl mr-4">Create Post</h2>
-                <img src={"/assets/img/blog.png"} width={"30px"} />
+                <img src={"/assets/img/blog.png"} width={"30px"} alt="new"/>
             </div>
             <div className="w-[70%]">
                 <Editor
-                    value={code}
+                    value={content}
                     onValueChange={handleContentChange}
                     highlight={code => highlight(code, languages.js)}
                     padding={20}

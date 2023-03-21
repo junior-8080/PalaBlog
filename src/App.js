@@ -8,6 +8,7 @@ import Signup from "./components/Shared/Signup";
 import AuthConatiner from "./components/AuthConatiner";
 import BlogEditor from "./components/BlogEditor";
 import PostsBoard from "./pages/PostsBoard";
+import Article from "./components/Homepage/Article";
 
 function App() {
   return (
@@ -32,9 +33,7 @@ function App() {
           }
         />
         <Route path="/create" element={<PostsBoard />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/deck-ml" element={<ModelDeck />} />
-      <Route path="/deck-pokeman" element={<PockmanDeck />} /> */}
+        <Route path="/posts/:id" element={<Article />} />
       </Routes>
     </div>
   );

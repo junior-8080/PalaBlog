@@ -5,7 +5,7 @@ const Author = () => {
     return (
         <div className="flex items-center py-4">
             <div className="mr-4">
-                <img src={"/assets/img/user.png"} width={"50px"} />
+                <img src={"/assets/img/user.png"} width={"50px"} alt="author"/>
             </div>
             <span className="author-meta">
                 <span className=""><a href="author.html">Steve</a></span><br />
