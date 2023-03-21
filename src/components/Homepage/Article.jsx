@@ -3,7 +3,7 @@ import React from 'react';
 const Article = ({ content }) => {
     return (
         <div className="w-[80%] mr-auto ml-auto mb-20">
-            <div className="h-[70vh] overflow-hidden" >
+            <div className="lg:h-[70vh] h-full overflow-hidden" >
                 <img src={"/assets/img/demopic/11.jpg"} alt="test"  />
             </div>
             <h2 className="text-4xl py-10 font-semibold">What is Lorem Ipsum?</h2>

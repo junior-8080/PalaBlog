@@ -21,7 +21,7 @@ const BlogEditor = ({ postId, article, handleBody }) => {
                 <h2 className="text-3xl mr-4">Create Post</h2>
                 <img src={"/assets/img/blog.png"} width={"30px"} alt="new"/>
             </div>
-            <div className="w-[70%]">
+            <div className="w-[100%] lg:w-[70%]">
                 <Editor
                     value={content}
                     onValueChange={handleContentChange}
