@@ -19,12 +19,20 @@ const BlogEditor = ({ postId, article, handleBody }) => {
         <div>
             <div className="flex py-6">
                 <h2 className="text-3xl mr-4">Create Post</h2>
-                <img src={"/assets/img/blog.png"} width={"30px"} alt="new"/>
+                <img src={"/assets/img/blog.png"} width={"30px"} alt="new" />
             </div>
             <div className="w-[100%] lg:w-[70%]">
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email"
+                    type="email"
+                    placeholder="Blog title"
+                    rows={4}
+                />
                 <Editor
                     value={content}
                     onValueChange={handleContentChange}
+                    placeholder="Write your content...."
                     highlight={code => highlight(code, languages.js)}
                     padding={20}
                     style={{
